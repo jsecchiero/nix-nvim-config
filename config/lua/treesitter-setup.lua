@@ -8,7 +8,7 @@ vim.defer_fn(function()
     vim.opt.runtimepath:append(vim.env.HOME .. '/.local/share/' .. vim.env.NVIM_APPNAME .. '/lazy/nvim-treesitter'),
 
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'terraform', "hcl" },
+    ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'terraform', "hcl", "nix" },
 
     -- Install parsers asynchronously (only applied to `ensure_installed`)
     sync_install = false,
