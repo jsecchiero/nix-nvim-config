@@ -5,9 +5,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set the runtime path to include `nvim` configuration files
-if vim.env.XDG_CONFIG_HOME ~= nil then
-  package.path = vim.fn.stdpath 'config' .. '/lua/?.lua;'
-end
+package.path = vim.g.config_root .. '/lua/?.lua;'
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 require('lazy-bootstrap')

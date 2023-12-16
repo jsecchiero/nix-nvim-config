@@ -136,8 +136,8 @@
       myNeovim = final.wrapNeovim final.neovim {
         configure = {
           customRC = ''
-            let $XDG_CONFIG_HOME="${loadConfig.dir}"
             let $NVIM_APPNAME="${appName}"
+            let config_root="${loadConfig.dir}/${appName}"
             let lazy_root="${loadPlugins.dir}/${appName}/lazy"
             luafile ${loadConfig.dir}/${appName}/init.lua
           '';

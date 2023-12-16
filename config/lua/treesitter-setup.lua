@@ -3,6 +3,7 @@
 -- Defer Treesitter setup after first render to improve startup time of 'nvim {filename}'
 vim.defer_fn(function()
   require('nvim-treesitter.configs').setup {
+    -- TODO: install parsers in build time
     parser_install_dir = vim.env.HOME .. '/.local/share/' .. vim.env.NVIM_APPNAME .. '/lazy/nvim-treesitter',
     vim.opt.runtimepath:append(vim.env.HOME .. '/.local/share/' .. vim.env.NVIM_APPNAME .. '/lazy/nvim-treesitter'),
 
