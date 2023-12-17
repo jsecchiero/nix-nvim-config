@@ -41,6 +41,12 @@ require('lazy').setup({
   {
     'christoomey/vim-tmux-navigator',
     dir = vim.g.lazy_root .. '/vim-tmux-navigator',
+    config = function()
+      vim.api.nvim_set_keymap('n', '<C-h>', ':<C-U>TmuxNavigateLeft<cr>',  {noremap = true, silent = true})
+      vim.api.nvim_set_keymap('n', '<C-j>', ':<C-U>TmuxNavigateDown<cr>',  {noremap = true, silent = true})
+      vim.api.nvim_set_keymap('n', '<C-k>', ':<C-U>TmuxNavigateUp<cr>',    {noremap = true, silent = true})
+      vim.api.nvim_set_keymap('n', '<C-l>', ':<C-U>TmuxNavigateRight<cr>', {noremap = true, silent = true})
+    end,
   },
 
   {

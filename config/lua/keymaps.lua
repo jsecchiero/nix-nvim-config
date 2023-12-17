@@ -20,12 +20,5 @@ vim.api.nvim_set_keymap('n', 'Y', 'yy', {noremap = true})
 -- Go back to the previous buffer (b#) with <leader><Tab>
 vim.api.nvim_set_keymap('n', '<leader><Tab>', ':b#<CR>', {noremap = true})
 
--- Tmux
--- fix lazy vim remapping https://www.reddit.com/r/neovim/comments/14yer8w/neovimtmux_navigation_plugin_with_lazyvim_not/
-vim.api.nvim_set_keymap('n', '<C-h>', ':<C-U>TmuxNavigateLeft<cr>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-j>', ':<C-U>TmuxNavigateDown<cr>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-k>', ':<C-U>TmuxNavigateUp<cr>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-l>', ':<C-U>TmuxNavigateRight<cr>', {noremap = true, silent = true})
-
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
