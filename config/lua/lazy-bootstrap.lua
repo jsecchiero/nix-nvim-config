@@ -2,7 +2,11 @@
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
 
+if vim.g.lazy_root == nil then
+  vim.g.lazy_root = vim.env.HOME .. '/.local/share/' .. vim.env.NVIM_APPNAME .. '/lazy'
+end
 lazypath = vim.g.lazy_root .. '/lazy.nvim'
+
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system {
     'git',
@@ -13,8 +17,7 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   }
 end
-vim.opt.rtp = lazypath
-package.path = package.path .. vim.g.lazy_root .. '/lazy.nvim/?.lua;'
+vim.opt.rtp = vim.opt.rtp + lazypath
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
