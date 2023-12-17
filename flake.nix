@@ -130,17 +130,24 @@
       inherit plugins;
       inherit appName;
     };
+    tools = import ./tools.nix {
+      inherit pkgs;
+    };
     loadConfig = import ./config.nix { inherit pkgs; inherit appName; };
 
     overlayMyNeovim = prev: final: {
       myNeovim = final.wrapNeovim final.neovim {
         configure = {
           customRC = ''
+            ${pkgs.lib.concatStringsSep "\n" (map (pkg: "let $PATH=$PATH .. \"${pkg}/bin\"") tools.packages)}
             let $NVIM_APPNAME="${appName}"
             let config_root="${loadConfig.dir}/${appName}"
             let lazy_root="${loadPlugins.dir}/${appName}/lazy"
             luafile ${loadConfig.dir}/${appName}/init.lua
           '';
+          packages.all.start = with pkgs.vimPlugins; [
+            nvim-treesitter
+          ];
         };
         withRuby = false;
         withPython3 = false;
