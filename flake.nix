@@ -139,7 +139,7 @@
       myNeovim = final.wrapNeovim final.neovim {
         configure = {
           customRC = ''
-            ${pkgs.lib.concatStringsSep "\n" (map (pkg: "let $PATH=$PATH .. \"${pkg}/bin\"") tools.packages)}
+            ${pkgs.lib.concatStringsSep "\n" (map (pkg: "let $PATH=$PATH .. \":${pkg}/bin\"") tools.packages)}
             let $NVIM_APPNAME="${appName}"
             let config_root="${loadConfig.dir}/${appName}"
             let lazy_root="${loadPlugins.dir}/${appName}/lazy"
