@@ -1,20 +1,22 @@
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
 -- Defer Treesitter setup after first render to improve startup time of 'nvim {filename}'
+local treesitter_auto_install = false
+if vim.g.treesitter_parsers_root == nil then
+  vim.g.treesitter_parsers_root = vim.env.HOME .. '/.local/share/' .. vim.env.NVIM_APPNAME .. '/lazy/nvim-treesitter'
+  treesitter_auto_install = true
+end
+vim.opt.runtimepath:append(vim.g.treesitter_parsers_root)
+
 vim.defer_fn(function()
   require('nvim-treesitter.configs').setup {
-    -- TODO: install parsers in build time
-    parser_install_dir = vim.env.HOME .. '/.local/share/' .. vim.env.NVIM_APPNAME .. '/lazy/nvim-treesitter',
-    vim.opt.runtimepath:append(vim.env.HOME .. '/.local/share/' .. vim.env.NVIM_APPNAME .. '/lazy/nvim-treesitter'),
-
-    -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'terraform', "hcl", "nix" },
+    parser_install_dir = vim.g.treesitter_parsers_root,
 
     -- Install parsers asynchronously (only applied to `ensure_installed`)
     sync_install = false,
 
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
-    auto_install = false,
+    auto_install = treesitter_auto_install,
 
     highlight = { enable = true },
     indent = { enable = true },

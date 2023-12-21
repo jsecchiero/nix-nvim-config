@@ -112,10 +112,6 @@
       url = "github:nvim-telescope/telescope-fzf-native.nvim";
       flake = false;
     };
-    nvim-treesitter = {
-      url = "github:nvim-treesitter/nvim-treesitter";
-      flake = false;
-    };
     nvim-treesitter-textobjects = {
       url = "github:nvim-treesitter/nvim-treesitter-textobjects";
       flake = false;
@@ -134,6 +130,7 @@
       inherit pkgs;
     };
     loadConfig = import ./config.nix { inherit pkgs; inherit appName; };
+    treeSitter = import ./treesitter { inherit pkgs; };
 
     overlayMyNeovim = prev: final: {
       myNeovim = final.wrapNeovim final.neovim {
@@ -143,11 +140,10 @@
             let $NVIM_APPNAME="${appName}"
             let config_root="${loadConfig.dir}/${appName}"
             let lazy_root="${loadPlugins.dir}/${appName}/lazy"
+            let treesitter_parsers_root="${treeSitter.parsersDir}"
+            let treesitter_root="${treeSitter.dir}"
             luafile ${loadConfig.dir}/${appName}/init.lua
           '';
-          packages.all.start = with pkgs.vimPlugins; [
-            nvim-treesitter
-          ];
         };
         withRuby = false;
         withPython3 = false;

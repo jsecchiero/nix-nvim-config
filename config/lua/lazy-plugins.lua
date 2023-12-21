@@ -236,7 +236,8 @@ require('lazy').setup({
   {
     -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
-    dir = vim.g.lazy_root .. '/nvim-treesitter',
+    --dir = vim.g.lazy_root .. '/nvim-treesitter',
+    dir = vim.g.treesitter_root,
     dependencies = {
       'nvim-treesitter/nvim-treesitter-textobjects',
       dir = vim.g.lazy_root .. '/nvim-treesitter-textobjects',

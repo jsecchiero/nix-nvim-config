@@ -5,7 +5,11 @@
 if vim.g.lazy_root == nil then
   vim.g.lazy_root = vim.env.HOME .. '/.local/share/' .. vim.env.NVIM_APPNAME .. '/lazy'
 end
-lazypath = vim.g.lazy_root .. '/lazy.nvim'
+local lazypath = vim.g.lazy_root .. '/lazy.nvim'
+
+if vim.g.treesitter_root == nil then
+  vim.g.treesitter_root = vim.env.HOME .. '/.local/share/' .. vim.env.NVIM_APPNAME .. '/lazy'
+end
 
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system {

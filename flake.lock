@@ -294,22 +294,6 @@
         "type": "github"
       }
     },
-    "nvim-treesitter": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1701008791,
-        "narHash": "sha256-fU8lQ3joZ6J2GhcTblDyEKz05tMlGqlrwvnrKhgsP1s=",
-        "owner": "nvim-treesitter",
-        "repo": "nvim-treesitter",
-        "rev": "b056e4227b1c5d3ecfe96941352364c0c10668df",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nvim-treesitter",
-        "repo": "nvim-treesitter",
-        "type": "github"
-      }
-    },
     "nvim-treesitter-textobjects": {
       "flake": false,
       "locked": {
@@ -361,7 +345,6 @@
         "nixpkgs": "nixpkgs",
         "nvim-cmp": "nvim-cmp",
         "nvim-lspconfig": "nvim-lspconfig",
-        "nvim-treesitter": "nvim-treesitter",
         "nvim-treesitter-textobjects": "nvim-treesitter-textobjects",
         "plenary.nvim": "plenary.nvim",
         "telescope-fzf-native.nvim": "telescope-fzf-native.nvim",
