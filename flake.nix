@@ -161,6 +161,6 @@
     };
 
   in {
-    packages.x86_64-linux.default = pkgs.myNeovim;
+    defaultPackage.x86_64-linux = pkgs.myNeovim;
   };
 }
