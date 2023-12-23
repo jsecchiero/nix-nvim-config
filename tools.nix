@@ -14,5 +14,6 @@
     pkgs.gopls
     pkgs.terraform-ls
     pkgs.tflint
+    pkgs.nixd
   ];
 }
