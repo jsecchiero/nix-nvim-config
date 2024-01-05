@@ -14,4 +14,5 @@
    "terraform"
    "hcl"
    "nix" 
+   "zig"
 ]
