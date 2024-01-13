@@ -13,7 +13,7 @@
     pkgs.nodePackages.bash-language-server
     pkgs.clang-tools
     pkgs.pyright
-    pkgs.nodePackages.vscode-json-languageserver
+    pkgs.vscode-langservers-extracted
     pkgs.gopls
     pkgs.terraform-ls
     pkgs.tflint
