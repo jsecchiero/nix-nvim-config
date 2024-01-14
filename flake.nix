@@ -116,6 +116,10 @@
       url = "github:nvim-treesitter/nvim-treesitter-textobjects";
       flake = false;
     };
+    nvim-dap = {
+      url = "github:mfussenegger/nvim-dap";
+      flake = false;
+    };
   };
   outputs = { self, nixpkgs, neovim, ... } @inputs: let
 
@@ -142,6 +146,7 @@
             let lazy_root="${loadPlugins.dir}/${appName}/lazy"
             let treesitter_parsers_root="${treeSitter.parsersDir}"
             let treesitter_root="${treeSitter.dir}"
+            let gdb_path="${pkgs.gdb}/bin/gdb"
             luafile ${loadConfig.dir}/${appName}/init.lua
           '';
         };

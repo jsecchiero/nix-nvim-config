@@ -279,6 +279,22 @@
         "type": "github"
       }
     },
+    "nvim-dap": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1705151920,
+        "narHash": "sha256-9Rc4dxbgN1LxoXPXHTi+V92MA0fEn5PveqCSMHbgn98=",
+        "owner": "mfussenegger",
+        "repo": "nvim-dap",
+        "rev": "9adbfdca13afbe646d09a8d7a86d5d031fb9c5a5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mfussenegger",
+        "repo": "nvim-dap",
+        "type": "github"
+      }
+    },
     "nvim-lspconfig": {
       "flake": false,
       "locked": {
@@ -345,6 +361,7 @@
         "neovim": "neovim",
         "nixpkgs": "nixpkgs",
         "nvim-cmp": "nvim-cmp",
+        "nvim-dap": "nvim-dap",
         "nvim-lspconfig": "nvim-lspconfig",
         "nvim-treesitter-textobjects": "nvim-treesitter-textobjects",
         "plenary.nvim": "plenary.nvim",
