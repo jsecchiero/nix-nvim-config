@@ -68,6 +68,10 @@ require('lazy').setup({
     'github/copilot.vim',
     dir = vim.g.lazy_root .. '/copilot.vim',
     config = function()
+      vim.g.copilot_filetypes = {
+        markdown = true,
+        yaml = true,
+      }
       vim.g.copilot_no_tab_map = true
       vim.api.nvim_set_keymap('i', '<C-J>', 'copilot#Accept("\\<CR>")', {expr = true, noremap = false, silent = true})
     end,
