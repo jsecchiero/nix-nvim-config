@@ -63,17 +63,26 @@ require('lazy').setup({
     end,
   },
 
-  -- Copilot
   {
     'github/copilot.vim',
     dir = vim.g.lazy_root .. '/copilot.vim',
     config = function()
+      vim.g.copilot_enabled = false
       vim.g.copilot_filetypes = {
         markdown = true,
         yaml = true,
       }
       vim.g.copilot_no_tab_map = true
       vim.api.nvim_set_keymap('i', '<C-J>', 'copilot#Accept("\\<CR>")', {expr = true, noremap = false, silent = true})
+    end,
+  },
+
+  {
+    'Exafunction/codeium.vim',
+    dir = vim.g.lazy_root .. '/codeium.vim',
+    event = 'BufEnter',
+    config = function()
+      vim.g.codeium_bin = vim.g.codeium_path
     end,
   },
 

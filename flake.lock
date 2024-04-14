@@ -80,6 +80,22 @@
         "type": "github"
       }
     },
+    "codeium.vim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1712034362,
+        "narHash": "sha256-I6Ev2m2WXhU3f2hXgjjmPhM2daoTyyScQZ+Oj0DgMB4=",
+        "owner": "Exafunction",
+        "repo": "codeium.vim",
+        "rev": "31dd2962c81759be007895db6ce089feec397c86",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Exafunction",
+        "repo": "codeium.vim",
+        "type": "github"
+      }
+    },
     "copilot.vim": {
       "flake": false,
       "locked": {
@@ -350,6 +366,7 @@
         "better-vim-tmux-resizer": "better-vim-tmux-resizer",
         "cmp-nvim-lsp": "cmp-nvim-lsp",
         "cmp_luasnip": "cmp_luasnip",
+        "codeium.vim": "codeium.vim",
         "copilot.vim": "copilot.vim",
         "fidget.nvim": "fidget.nvim",
         "friendly-snippets": "friendly-snippets",

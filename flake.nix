@@ -48,6 +48,10 @@
       url = "github:github/copilot.vim";
       flake = false;
     };
+    "codeium.vim" = {
+      url = "github:Exafunction/codeium.vim";
+      flake = false;
+    };
     nvim-lspconfig = {
       url = "github:neovim/nvim-lspconfig";
       flake = false;
@@ -147,6 +151,7 @@
             let treesitter_parsers_root="${treeSitter.parsersDir}"
             let treesitter_root="${treeSitter.dir}"
             let gdb_path="${pkgs.gdb}/bin/gdb"
+            let codeium_path="${pkgs.codeium}/bin/codeium_language_server"
             luafile ${loadConfig.dir}/${appName}/init.lua
           '';
         };
@@ -163,6 +168,7 @@
     pkgs = import nixpkgs {
       system = "x86_64-linux";
       overlays = [ overlayFlakeInputs overlayMyNeovim ];
+      config.allowUnfree = true;
     };
 
   in {
