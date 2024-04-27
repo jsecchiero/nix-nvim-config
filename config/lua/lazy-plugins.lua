@@ -83,6 +83,9 @@ require('lazy').setup({
     event = 'BufEnter',
     config = function()
       vim.g.codeium_bin = vim.g.codeium_path
+      vim.g.codeium_no_tab_map = 1
+      vim.g.codeium_disable_bindings = 1
+      vim.api.nvim_set_keymap('i', '<C-J>', 'codeium#Accept()', {expr = true, noremap = false, silent = true})
     end,
   },
 
