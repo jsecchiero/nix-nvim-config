@@ -41,6 +41,9 @@ vim.o.expandtab = true
 vim.bo.tabstop = 4
 vim.bo.shiftwidth = 4
 
+-- Set tabstop for golang
+vim.cmd [[ autocmd FileType go setlocal tabstop=4 shiftwidth=4 noexpandtab ]]
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
