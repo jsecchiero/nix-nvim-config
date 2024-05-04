@@ -52,6 +52,10 @@
       url = "github:Exafunction/codeium.vim";
       flake = false;
     };
+    "chatgpt.nvim" = {
+      url = "github:JackMort/ChatGPT.nvim";
+      flake = false;
+    };
     nvim-lspconfig = {
       url = "github:neovim/nvim-lspconfig";
       flake = false;

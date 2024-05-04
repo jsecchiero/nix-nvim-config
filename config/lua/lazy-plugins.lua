@@ -49,6 +49,7 @@ require('lazy').setup({
     end,
   },
 
+  -- AI section
   {
     'RyanMillerC/better-vim-tmux-resizer',
     dir = vim.g.lazy_root .. '/better-vim-tmux-resizer',
@@ -87,6 +88,23 @@ require('lazy').setup({
       vim.g.codeium_disable_bindings = 1
       vim.api.nvim_set_keymap('i', '<C-J>', 'codeium#Accept()', {expr = true, noremap = false, silent = true})
     end,
+  },
+
+  {
+    'JackMort/ChatGPT.nvim',
+    dir = vim.g.lazy_root .. '/chatgpt.nvim',
+    event = 'VeryLazy',
+    config = function()
+      require("chatgpt").setup({
+        api_key_cmd = "cat " .. os.getenv("HOME") .. "/.config/openai/apikey"
+    })
+    end,
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "folke/trouble.nvim",
+      "nvim-telescope/telescope.nvim"
+    },
   },
 
   -- NOTE: This is where your plugins related to LSP can be installed.
