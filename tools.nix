@@ -3,7 +3,7 @@
   packages = [
     # Basic
     pkgs.git
-    pkgs.nodejs_21
+    pkgs.nodejs
     pkgs.ripgrep
     pkgs.fd
     pkgs.fzf
