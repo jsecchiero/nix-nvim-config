@@ -65,9 +65,27 @@ local lspconfig = require'lspconfig'
 local servers = {'clangd', 'gopls', 'rust_analyzer', 'terraformls', 'tflint', 'nixd', 'lua_ls', 'bashls', 'pyright', 'jsonls', 'zls'}
 
 for _, server in ipairs(servers) do
+
+  if server == 'nixd' then
+    lspconfig[server].setup {
+      on_attach = on_attach,
+      settings = {
+        diagnostic = {
+          suppress = {
+            "sema-escaping-with"
+          }
+        }
+      }
+    }
+
+    goto continue
+  end
+
   lspconfig[server].setup {
     on_attach = on_attach,
   }
+
+  ::continue::
 end
 
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
