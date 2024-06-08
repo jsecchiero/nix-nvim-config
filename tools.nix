@@ -7,8 +7,6 @@
     pkgs.ripgrep
     pkgs.fd
     pkgs.fzf
-    pkgs.curl
-    pkgs.coreutils-full
     # Lsp servers
     pkgs.lua-language-server
     pkgs.rust-analyzer
