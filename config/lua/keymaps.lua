@@ -14,9 +14,6 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnos
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
--- Copy all the line with Y
-vim.api.nvim_set_keymap('n', 'Y', 'yy', {noremap = true})
-
 -- Go back to the previous buffer (b#) with <leader><Tab>
 vim.api.nvim_set_keymap('n', '<leader><Tab>', ':b#<CR>', {noremap = true})
 
