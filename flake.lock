@@ -48,22 +48,6 @@
         "type": "github"
       }
     },
-    "chatgpt.nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1709721561,
-        "narHash": "sha256-vD3NEsYmPRWlxBSOxyIMIQiJXQXxx0hhsw4zIxxXB3o=",
-        "owner": "JackMort",
-        "repo": "ChatGPT.nvim",
-        "rev": "df53728e05129278d6ea26271ec086aa013bed90",
-        "type": "github"
-      },
-      "original": {
-        "owner": "JackMort",
-        "repo": "ChatGPT.nvim",
-        "type": "github"
-      }
-    },
     "cmp-nvim-lsp": {
       "flake": false,
       "locked": {
@@ -380,7 +364,6 @@
         "Comment.nvim": "Comment.nvim",
         "LuaSnip": "LuaSnip",
         "better-vim-tmux-resizer": "better-vim-tmux-resizer",
-        "chatgpt.nvim": "chatgpt.nvim",
         "cmp-nvim-lsp": "cmp-nvim-lsp",
         "cmp_luasnip": "cmp_luasnip",
         "codeium.vim": "codeium.vim",
