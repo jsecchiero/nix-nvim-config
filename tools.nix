@@ -19,5 +19,6 @@
     pkgs.tflint
     pkgs.nixd
     pkgs.zls
+    pkgs.jsonnet-language-server
   ];
 }

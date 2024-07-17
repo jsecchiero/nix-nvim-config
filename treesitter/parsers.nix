@@ -15,4 +15,5 @@
    "hcl"
    "nix" 
    "zig"
+   "jsonnet"
 ]

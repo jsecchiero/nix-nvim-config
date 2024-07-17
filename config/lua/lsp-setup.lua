@@ -62,7 +62,20 @@ require('neodev').setup()
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 -- Require :LspRestart if other instances of nvim are already running
 local lspconfig = require'lspconfig'
-local servers = {'clangd', 'gopls', 'rust_analyzer', 'terraformls', 'tflint', 'nixd', 'lua_ls', 'bashls', 'pyright', 'jsonls', 'zls'}
+local servers = {
+  'clangd',
+  'gopls',
+  'rust_analyzer',
+  'terraformls',
+  'tflint',
+  'nixd',
+  'lua_ls',
+  'bashls',
+  'pyright',
+  'jsonls',
+  'zls',
+  'jsonnet_ls'
+}
 
 for _, server in ipairs(servers) do
 
