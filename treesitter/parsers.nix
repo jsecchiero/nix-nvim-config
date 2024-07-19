@@ -16,4 +16,5 @@
    "nix" 
    "zig"
    "jsonnet"
+   "promql"
 ]
