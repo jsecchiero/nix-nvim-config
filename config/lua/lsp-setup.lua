@@ -74,7 +74,8 @@ local servers = {
   'pyright',
   'jsonls',
   'zls',
-  'jsonnet_ls'
+  'jsonnet_ls',
+  'tsserver'
 }
 
 for _, server in ipairs(servers) do

@@ -17,4 +17,5 @@
    "zig"
    "jsonnet"
    "promql"
+   "typescript"
 ]

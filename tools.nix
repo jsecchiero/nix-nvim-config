@@ -20,5 +20,7 @@
     pkgs.nixd
     pkgs.zls
     pkgs.jsonnet-language-server
+    pkgs.typescript
+    pkgs.nodePackages.typescript-language-server
   ];
 }
