@@ -1,5 +1,17 @@
-{ pkgs }:
-{
+{ pkgs, naersk }: let
+
+  naersk-lib = pkgs.callPackage naersk { };
+
+  gdshader = naersk-lib.buildPackage {
+    src = pkgs.fetchFromGitHub {
+      owner = "GodOfAvacyn";
+      repo = "gdshader-lsp";
+      rev = "main";
+      sha256 = "sha256-kzZhHIRXW3m3n5TlNRDQO9XsDoSi59N7+4NeFKtauEM=";
+    };
+  };
+
+in {
   packages = [
     # Basic
     pkgs.git
@@ -22,5 +34,6 @@
     pkgs.jsonnet-language-server
     pkgs.typescript
     pkgs.nodePackages.typescript-language-server
+    gdshader
   ];
 }

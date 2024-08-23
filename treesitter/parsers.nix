@@ -18,4 +18,6 @@
    "jsonnet"
    "promql"
    "typescript"
+   "gdscript"
+   "gdshader"
 ]

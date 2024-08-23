@@ -75,7 +75,9 @@ local servers = {
   'jsonls',
   'zls',
   'jsonnet_ls',
-  'tsserver'
+  'tsserver',
+  'gdscript',
+  'gdshader_lsp'
 }
 
 for _, server in ipairs(servers) do

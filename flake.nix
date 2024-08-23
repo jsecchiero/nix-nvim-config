@@ -124,11 +124,14 @@
       url = "github:mfussenegger/nvim-dap";
       flake = false;
     };
+    naersk = {
+      url = "github:nix-community/naersk/master";
+    };
   };
   outputs = { self, nixpkgs, neovim, ... } @inputs: let
 
     appName = "nix-nvim";
-    plugins = builtins.removeAttrs inputs ["self" "nixpkgs" "neovim"];
+    plugins = builtins.removeAttrs inputs ["self" "nixpkgs" "neovim" "naersk"];
     loadPlugins = import ./plugins.nix {
       inherit pkgs;
       inherit plugins;
@@ -136,6 +139,7 @@
     };
     tools = import ./tools.nix {
       inherit pkgs;
+      naersk = inputs.naersk;
     };
     loadConfig = import ./config.nix { inherit pkgs; inherit appName; };
     treeSitter = import ./treesitter { inherit pkgs; };
