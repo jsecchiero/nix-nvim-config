@@ -132,20 +132,30 @@
 
     appName = "nix-nvim";
     plugins = builtins.removeAttrs inputs ["self" "nixpkgs" "neovim" "naersk"];
-    loadPlugins = import ./plugins.nix {
-      inherit pkgs;
-      inherit plugins;
-      inherit appName;
-    };
-    tools = import ./tools.nix {
-      inherit pkgs;
-      naersk = inputs.naersk;
-    };
-    loadConfig = import ./config.nix { inherit pkgs; inherit appName; };
-    treeSitter = import ./treesitter { inherit pkgs; };
 
-    overlayMyNeovim = prev: final: {
-      myNeovim = final.wrapNeovim final.neovim {
+    supportedSystems = [ "x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin" ];
+    forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
+
+    myNeovimFor = system: let
+
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+
+      loadPlugins = import ./plugins.nix {
+        inherit pkgs;
+        inherit plugins;
+        inherit appName;
+      };
+      tools = import ./tools.nix {
+        inherit pkgs;
+        naersk = inputs.naersk;
+      };
+      loadConfig = import ./config.nix { inherit pkgs; inherit appName; };
+      treeSitter = import ./treesitter { inherit pkgs; };
+
+      myNeovim = pkgs.wrapNeovim neovim.packages.${system}.neovim {
         configure = {
           customRC = ''
             ${pkgs.lib.concatStringsSep "\n" (map (pkg: "let $PATH=$PATH .. \":${pkg}/bin\"") tools.packages)}
@@ -163,19 +173,8 @@
         withPython3 = false;
         withNodeJs = false;
       };
-    };
-
-    overlayFlakeInputs = prev: final: {
-      neovim = neovim.packages.x86_64-linux.neovim;
-    };
-
-    pkgs = import nixpkgs {
-      system = "x86_64-linux";
-      overlays = [ overlayFlakeInputs overlayMyNeovim ];
-      config.allowUnfree = true;
-    };
-
+    in myNeovim;
   in {
-    defaultPackage.x86_64-linux = pkgs.myNeovim;
+    defaultPackage = forAllSystems (system: myNeovimFor system);
   };
 }
