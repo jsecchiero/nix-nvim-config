@@ -44,16 +44,17 @@ local on_attach = function(_, bufnr)
 end
 
 -- document existing key chains
-require('which-key').register {
-  ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-  ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
-  ['<leader>h'] = { name = '[H]elpers', _ = 'which_key_ignore' },
-  ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
-  ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
-  ['<leader>g'] = { name = '[G]rep', _ = 'which_key_ignore' },
-  ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
-  ['<leader><Tab>'] = { name = '[T]ab', _ = 'which_key_ignore' },
-}
+require('which-key').add({
+  mode = { "n", "v" },
+  {'<leader>c',     desc = '[C]ode',     },
+  {'<leader>d',     desc = '[D]ocument', },
+  {'<leader>h',     desc = '[H]elpers',  },
+  {'<leader>r',     desc = '[R]ename',   },
+  {'<leader>s',     desc = '[S]earch',   },
+  {'<leader>g',     desc = '[G]rep',     },
+  {'<leader>w',     desc = '[W]orkspace',},
+  {'<leader><Tab>', desc = '[T]ab',      },
+})
 
 -- Setup neovim lua configuration
 require('neodev').setup()
