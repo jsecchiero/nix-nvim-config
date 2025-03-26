@@ -75,7 +75,7 @@ local servers = {
   'jsonls',
   'zls',
   'jsonnet_ls',
-  'tsserver',
+  'ts_ls',
   'gdscript',
   'gdshader_lsp'
 }
