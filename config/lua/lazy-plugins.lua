@@ -197,9 +197,14 @@ require('lazy').setup({
       -- NOTE: You should make sure your terminal supports this
       vim.o.termguicolors = true
 
+      require("gruvbox").setup({
+        inverse = false,
+      })
+
       -- Set colorscheme
       vim.o.background = 'dark'
       vim.cmd [[colorscheme gruvbox]]
+
     end
   },
 
