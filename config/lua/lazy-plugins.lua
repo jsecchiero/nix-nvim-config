@@ -199,6 +199,10 @@ require('lazy').setup({
 
       require("gruvbox").setup({
         inverse = false,
+        overrides = {
+          Search = { bg = "#fabd2f", fg = "#282828", bold = true }, -- Make search matches visible
+          IncSearch = { bg = "#fe8019", fg = "#282828", bold = true }, -- Highlight incremental search
+        },
       })
 
       -- Set colorscheme
