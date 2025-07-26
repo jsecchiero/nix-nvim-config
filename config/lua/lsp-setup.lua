@@ -47,7 +47,6 @@ end
 require('which-key').add({
   mode = { "n", "v" },
   {'<leader>c',     desc = '[C]ode',     },
-  {'<leader>d',     desc = '[D]ocument', },
   {'<leader>h',     desc = '[H]elpers',  },
   {'<leader>r',     desc = '[R]ename',   },
   {'<leader>s',     desc = '[S]earch',   },

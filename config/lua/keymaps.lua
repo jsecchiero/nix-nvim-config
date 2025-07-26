@@ -15,7 +15,7 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open float
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- Go back to the previous buffer (b#) with <leader><Tab>
-vim.api.nvim_set_keymap('n', '<leader><Tab>', ':b#<CR>', {noremap = true})
+vim.keymap.set('n', '<leader><Tab>', '<Cmd>b#<CR>', { desc = 'Switch to Last Buffer' })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

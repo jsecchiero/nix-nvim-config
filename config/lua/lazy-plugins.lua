@@ -68,10 +68,10 @@ require('lazy').setup({
     'christoomey/vim-tmux-navigator',
     dir = vim.g.lazy_root .. '/vim-tmux-navigator',
     config = function()
-      vim.api.nvim_set_keymap('n', '<C-h>', ':<C-U>TmuxNavigateLeft<cr>',  {noremap = true, silent = true})
-      vim.api.nvim_set_keymap('n', '<C-j>', ':<C-U>TmuxNavigateDown<cr>',  {noremap = true, silent = true})
-      vim.api.nvim_set_keymap('n', '<C-k>', ':<C-U>TmuxNavigateUp<cr>',    {noremap = true, silent = true})
-      vim.api.nvim_set_keymap('n', '<C-l>', ':<C-U>TmuxNavigateRight<cr>', {noremap = true, silent = true})
+      vim.keymap.set('n', '<C-h>', '<Cmd>TmuxNavigateLeft<CR>',  { desc = 'Tmux: Move to Left Pane',  silent = true })
+      vim.keymap.set('n', '<C-j>', '<Cmd>TmuxNavigateDown<CR>',  { desc = 'Tmux: Move to Lower Pane', silent = true })
+      vim.keymap.set('n', '<C-k>', '<Cmd>TmuxNavigateUp<CR>',    { desc = 'Tmux: Move to Upper Pane', silent = true })
+      vim.keymap.set('n', '<C-l>', '<Cmd>TmuxNavigateRight<CR>', { desc = 'Tmux: Move to Right Pane', silent = true })
     end,
   },
 
@@ -82,10 +82,10 @@ require('lazy').setup({
       vim.g.tmux_navigator_no_mappings = 1
       vim.g.tmux_resizer_resize_count = 1
       vim.g.tmux_resizer_vertical_resize_count = 1
-      vim.api.nvim_set_keymap('n', '<C-w><lt>', ':TmuxResizeLeft<CR>',  {noremap = true, silent = true})
-      vim.api.nvim_set_keymap('n', '<C-w>-',    ':TmuxResizeDown<CR>',  {noremap = true, silent = true})
-      vim.api.nvim_set_keymap('n', '<C-w>+',    ':TmuxResizeUp<CR>',    {noremap = true, silent = true})
-      vim.api.nvim_set_keymap('n', '<C-w>>',    ':TmuxResizeRight<CR>', {noremap = true, silent = true})
+      vim.keymap.set('n', '<C-w><lt>', '<Cmd>TmuxResizeLeft<CR>',  { desc = 'Tmux: Resize Pane Left',  silent = true })
+      vim.keymap.set('n', '<C-w>-',    '<Cmd>TmuxResizeDown<CR>',  { desc = 'Tmux: Resize Pane Down',  silent = true })
+      vim.keymap.set('n', '<C-w>+',    '<Cmd>TmuxResizeUp<CR>',    { desc = 'Tmux: Resize Pane Up',    silent = true })
+      vim.keymap.set('n', '<C-w>>',    '<Cmd>TmuxResizeRight<CR>', { desc = 'Tmux: Resize Pane Right', silent = true })
     end,
   },
 
@@ -99,7 +99,12 @@ require('lazy').setup({
         yaml = true,
       }
       vim.g.copilot_no_tab_map = true
-      vim.api.nvim_set_keymap('i', '<C-J>', 'copilot#Accept("\\<CR>")', {expr = true, noremap = false, silent = true})
+      vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
+        expr = true,
+        noremap = false,
+        silent = true,
+        desc = 'Copilot: Accept Suggestion'
+      })
     end,
   },
 
@@ -111,7 +116,12 @@ require('lazy').setup({
       vim.g.codeium_bin = vim.g.codeium_path
       vim.g.codeium_no_tab_map = 1
       vim.g.codeium_disable_bindings = 1
-      vim.api.nvim_set_keymap('i', '<C-J>', 'codeium#Accept()', {expr = true, noremap = false, silent = true})
+      vim.keymap.set('i', '<C-J>', 'codeium#Accept()', {
+        expr = true,
+        noremap = false,
+        silent = true,
+        desc = 'Codeium: Accept Suggestion'
+      })
     end,
   },
 
@@ -295,7 +305,7 @@ require('lazy').setup({
       "mfussenegger/nvim-dap",
       dir = vim.g.lazy_root .. '/nvim-dap',
       config = function()
-          vim.keymap.set("n", "<leader>d", ":DapToggleRepl<CR>")
+          vim.keymap.set("n", "<leader>d", ":DapToggleRepl<CR>", { desc = "[d]ebug REPL" })
       end,
   },
 }, {})
