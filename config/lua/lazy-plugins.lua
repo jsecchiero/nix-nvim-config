@@ -1,5 +1,31 @@
 require('lazy').setup({
-  -- NOTE: First, some plugins that don't require any configuration
+  -- Useful plugin to show you pending keybinds.
+  {
+    'folke/which-key.nvim',
+    dir = vim.g.lazy_root .. '/which-key.nvim',
+    opts = {},
+  },
+
+  -- File browser
+  {
+    'echasnovski/mini.files',
+    dir = vim.g.lazy_root .. '/mini.files',
+    dependencies = {
+      -- Avoid to shows empty squares
+      -- needs nerdfonts
+      {
+        'echasnovski/mini.icons',
+        dir = vim.g.lazy_root .. '/mini.icons',
+        config = function()
+          require('mini.icons').setup()
+        end,
+      },
+    },
+    config = function()
+      require('mini.files').setup()
+      vim.keymap.set('n', '<leader>.', ':lua MiniFiles.open()<CR>', { desc = 'Open File [E]ditor' })
+    end,
+  },
 
   -- Git related plugins
   {
@@ -142,12 +168,6 @@ require('lazy').setup({
     },
   },
 
-  -- Useful plugin to show you pending keybinds.
-  {
-    'folke/which-key.nvim',
-    dir = vim.g.lazy_root .. '/which-key.nvim',
-    opts = {},
-  },
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',

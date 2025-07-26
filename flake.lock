@@ -349,6 +349,38 @@
         "type": "github"
       }
     },
+    "mini.files": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1753189713,
+        "narHash": "sha256-TA/lf25tto5/w8H/envfOkXuHSNdZj/wCftSeMLkYvg=",
+        "owner": "echasnovski",
+        "repo": "mini.files",
+        "rev": "5b9431cf5c69b8e69e5a67d2d12338a3ac2e1541",
+        "type": "github"
+      },
+      "original": {
+        "owner": "echasnovski",
+        "repo": "mini.files",
+        "type": "github"
+      }
+    },
+    "mini.icons": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1753356727,
+        "narHash": "sha256-NTmY4He0rC+/wrPJ+9FoDoPFKT/TtmqG5IQhpmNd9B8=",
+        "owner": "echasnovski",
+        "repo": "mini.icons",
+        "rev": "b8f6fa6f5a3fd0c56936252edcd691184e5aac0c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "echasnovski",
+        "repo": "mini.icons",
+        "type": "github"
+      }
+    },
     "naersk": {
       "inputs": {
         "nixpkgs": "nixpkgs"
@@ -551,6 +583,8 @@
         "gruvbox.nvim": "gruvbox.nvim",
         "lazy.nvim": "lazy.nvim",
         "lualine.nvim": "lualine.nvim",
+        "mini.files": "mini.files",
+        "mini.icons": "mini.icons",
         "naersk": "naersk",
         "neodev.nvim": "neodev.nvim",
         "neovim": "neovim",

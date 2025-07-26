@@ -12,6 +12,14 @@
       url = "github:folke/lazy.nvim";
       flake = false;
     };
+    "mini.files" = {
+      url = "github:echasnovski/mini.files";
+      flake = false;
+    };
+    "mini.icons" = {
+      url = "github:echasnovski/mini.icons";
+      flake = false;
+    };
     vim-fugitive = {
       url = "github:tpope/vim-fugitive";
       flake = false;
