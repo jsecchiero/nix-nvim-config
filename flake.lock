@@ -381,6 +381,22 @@
         "type": "github"
       }
     },
+    "mini.surround": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1753189716,
+        "narHash": "sha256-jmxdD9rrVocOczkOkyRICfD/B6SiD1glsxnIALFR/ww=",
+        "owner": "echasnovski",
+        "repo": "mini.surround",
+        "rev": "b12fcfefd6b9b7c9e9a773bc0e3e07ae20c03351",
+        "type": "github"
+      },
+      "original": {
+        "owner": "echasnovski",
+        "repo": "mini.surround",
+        "type": "github"
+      }
+    },
     "naersk": {
       "inputs": {
         "nixpkgs": "nixpkgs"
@@ -585,6 +601,7 @@
         "lualine.nvim": "lualine.nvim",
         "mini.files": "mini.files",
         "mini.icons": "mini.icons",
+        "mini.surround": "mini.surround",
         "naersk": "naersk",
         "neodev.nvim": "neodev.nvim",
         "neovim": "neovim",
@@ -601,7 +618,6 @@
         "vim-prosession": "vim-prosession",
         "vim-rhubarb": "vim-rhubarb",
         "vim-sleuth": "vim-sleuth",
-        "vim-surround": "vim-surround",
         "vim-tmux-navigator": "vim-tmux-navigator",
         "which-key.nvim": "which-key.nvim"
       }
@@ -736,22 +752,6 @@
       "original": {
         "owner": "tpope",
         "repo": "vim-sleuth",
-        "type": "github"
-      }
-    },
-    "vim-surround": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1666730476,
-        "narHash": "sha256-DZE5tkmnT+lAvx/RQHaDEgEJXRKsy56KJY919xiH1lE=",
-        "owner": "tpope",
-        "repo": "vim-surround",
-        "rev": "3d188ed2113431cf8dac77be61b842acb64433d9",
-        "type": "github"
-      },
-      "original": {
-        "owner": "tpope",
-        "repo": "vim-surround",
         "type": "github"
       }
     },

@@ -45,8 +45,11 @@ require('lazy').setup({
 
   -- Sorrounds text with brackets, parens, quotes, etc
   {
-    'tpope/vim-surround',
-    dir = vim.g.lazy_root .. '/vim-surround',
+    'echasnovski/mini.surround',
+    dir = vim.g.lazy_root .. '/mini.surround',
+    config = function()
+      require('mini.surround').setup()
+    end,
   },
 
   -- Session management

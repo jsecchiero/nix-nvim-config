@@ -20,6 +20,10 @@
       url = "github:echasnovski/mini.icons";
       flake = false;
     };
+    "mini.surround" = {
+      url = "github:echasnovski/mini.surround";
+      flake = false;
+    };
     vim-fugitive = {
       url = "github:tpope/vim-fugitive";
       flake = false;
@@ -30,10 +34,6 @@
     };
     vim-sleuth = {
       url = "github:tpope/vim-sleuth";
-      flake = false;
-    };
-    vim-surround = {
-      url = "github:tpope/vim-surround";
       flake = false;
     };
     vim-obsession = {
