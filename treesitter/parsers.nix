@@ -15,6 +15,7 @@
    "hcl"
    "nix" 
    "zig"
+   "odin"
    "jsonnet"
    "promql"
    "typescript"

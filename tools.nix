@@ -31,6 +31,7 @@ in {
     pkgs.tflint
     pkgs.nixd
     pkgs.zls
+    pkgs.ols
     pkgs.jsonnet-language-server
     pkgs.typescript
     pkgs.nodePackages.typescript-language-server

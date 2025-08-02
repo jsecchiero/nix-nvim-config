@@ -74,6 +74,7 @@ local servers = {
   'pyright',
   'jsonls',
   'zls',
+  'ols',
   'jsonnet_ls',
   'ts_ls',
   'gdscript',
