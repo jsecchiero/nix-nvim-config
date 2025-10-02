@@ -6,8 +6,8 @@
     src = pkgs.fetchFromGitHub {
       owner = "GodOfAvacyn";
       repo = "gdshader-lsp";
-      rev = "main";
-      sha256 = "sha256-kzZhHIRXW3m3n5TlNRDQO9XsDoSi59N7+4NeFKtauEM=";
+      rev = "b290b6793498ba1795b869a58a18eda2d22b8f3a";
+      sha256 = "sha256-TcL5o7mBxoTOL+QWbH+467nnzzDB8ev0BeLIw/h7FQQ=";
     };
   };
 
