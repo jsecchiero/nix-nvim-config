@@ -132,6 +132,10 @@
       url = "github:mfussenegger/nvim-dap";
       flake = false;
     };
+    "opencode.nvim" = {
+      url = "github:NickvanDyke/opencode.nvim";
+      flake = false;
+    };
     naersk = {
       url = "github:nix-community/naersk/master";
     };

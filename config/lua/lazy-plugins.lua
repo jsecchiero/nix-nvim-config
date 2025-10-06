@@ -311,6 +311,16 @@ require('lazy').setup({
           vim.keymap.set("n", "<leader>d", ":DapToggleRepl<CR>", { desc = "[d]ebug REPL" })
       end,
   },
+
+  {
+    'NickvanDyke/opencode.nvim',
+    dir = vim.g.lazy_root .. '/opencode.nvim',
+    config = function()
+      vim.opt.autoread = true
+
+      vim.keymap.set("x", "<leader>o", function() require("opencode").ask("@selection: ") end, { desc = "Ask about selection to opencode" })
+    end,
+  },
 }, {})
 
 -- The line beneath this is called `modeline`. See `:help modeline`

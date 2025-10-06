@@ -568,6 +568,22 @@
         "type": "github"
       }
     },
+    "opencode.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1759698810,
+        "narHash": "sha256-j6d710UH3JJEobRL0PExdhFaWZp60INYtGefRcZQA8E=",
+        "owner": "NickvanDyke",
+        "repo": "opencode.nvim",
+        "rev": "26699bc6319d74f0f70f7538466829b43f5e2bb4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NickvanDyke",
+        "repo": "opencode.nvim",
+        "type": "github"
+      }
+    },
     "plenary.nvim": {
       "flake": false,
       "locked": {
@@ -610,6 +626,7 @@
         "nvim-dap": "nvim-dap",
         "nvim-lspconfig": "nvim-lspconfig",
         "nvim-treesitter-textobjects": "nvim-treesitter-textobjects",
+        "opencode.nvim": "opencode.nvim",
         "plenary.nvim": "plenary.nvim",
         "telescope-fzf-native.nvim": "telescope-fzf-native.nvim",
         "telescope.nvim": "telescope.nvim",
