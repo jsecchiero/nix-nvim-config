@@ -571,11 +571,11 @@
     "opencode.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1759698810,
-        "narHash": "sha256-j6d710UH3JJEobRL0PExdhFaWZp60INYtGefRcZQA8E=",
+        "lastModified": 1765728996,
+        "narHash": "sha256-+hgiJ6GXOPafdmUuSdwhbyIKILjI5HMJQYtsFtdSp0k=",
         "owner": "NickvanDyke",
         "repo": "opencode.nvim",
-        "rev": "26699bc6319d74f0f70f7538466829b43f5e2bb4",
+        "rev": "aba9e8c64cdb074d3d481e3a0101f6113061bef3",
         "type": "github"
       },
       "original": {

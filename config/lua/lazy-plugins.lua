@@ -318,7 +318,7 @@ require('lazy').setup({
     config = function()
       vim.opt.autoread = true
 
-      vim.keymap.set("x", "<leader>o", function() require("opencode").ask("@selection: ") end, { desc = "Ask about selection to opencode" })
+      vim.keymap.set("x", "<leader>o", function() require("opencode").ask("@this: ", { submit = true }) end, { desc = "Ask opencode" })
     end,
   },
 }, {})
