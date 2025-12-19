@@ -22,7 +22,28 @@ require('lazy').setup({
       },
     },
     config = function()
-      require('mini.files').setup()
+      local mf = require('mini.files')
+      mf.setup()
+
+      local set_cwd = function()
+        local state = mf.get_explorer_state()
+        if state == nil then return end
+
+        local path = state.branch[state.depth_focus]
+        state.anchor = path
+
+        vim.fn.chdir(path)
+        vim.notify('Current working directory set to ' .. vim.inspect(path))
+      end
+
+      vim.api.nvim_create_autocmd('User', {
+        pattern = 'MiniFilesBufferCreate',
+        callback = function(args)
+          local b = args.data.buf_id
+          vim.keymap.set('n', '*', set_cwd, { buffer = b, desc = 'Set cwd' })
+        end,
+      })
+
       vim.keymap.set('n', '<leader>.', ':lua MiniFiles.open()<CR>', { desc = 'Open File [E]ditor' })
     end,
   },
