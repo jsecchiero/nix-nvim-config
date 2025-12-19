@@ -278,8 +278,24 @@ require('lazy').setup({
         section_separators = '',
       },
       sections = {
-        lualine_a = {'mode'},
-        lualine_b = {},
+        lualine_a = {{'mode', fmt = function(str) return str:sub(1,1) end}},
+        lualine_b = {
+          function()
+            return vim.fn.fnamemodify(vim.fn.getcwd(), ':t')
+          end
+        },
+        lualine_c = {{'filename', path = 1}},
+        lualine_x = {},
+        lualine_y = {'progress'},
+        lualine_z = {'location'},
+      },
+      inactive_sections = {
+        lualine_a = {{'mode', fmt = function(str) return str:sub(1,1) end}},
+        lualine_b = {
+          function()
+            return vim.fn.fnamemodify(vim.fn.getcwd(), ':t')
+          end
+        },
         lualine_c = {{'filename', path = 1}},
         lualine_x = {},
         lualine_y = {'progress'},
