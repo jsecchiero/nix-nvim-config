@@ -133,7 +133,7 @@
       flake = false;
     };
     "opencode.nvim" = {
-      url = "github:NickvanDyke/opencode.nvim";
+      url = "github:NickvanDyke/opencode.nvim/cb8660e08fb6ecc248f267ff0f45d5be5075c586";
       flake = false;
     };
     naersk = {
