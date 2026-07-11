@@ -52,14 +52,6 @@
       url = "github:RyanMillerC/better-vim-tmux-resizer";
       flake = false;
     };
-    "copilot.vim" = {
-      url = "github:github/copilot.vim";
-      flake = false;
-    };
-    "codeium.vim" = {
-      url = "github:Exafunction/codeium.vim";
-      flake = false;
-    };
     nvim-lspconfig = {
       url = "github:neovim/nvim-lspconfig";
       flake = false;
@@ -132,10 +124,6 @@
       url = "github:mfussenegger/nvim-dap";
       flake = false;
     };
-    "opencode.nvim" = {
-      url = "github:NickvanDyke/opencode.nvim/cb8660e08fb6ecc248f267ff0f45d5be5075c586";
-      flake = false;
-    };
     naersk = {
       url = "github:nix-community/naersk/master";
     };
@@ -177,7 +165,6 @@
             let treesitter_parsers_root="${treeSitter.parsersDir}"
             let treesitter_root="${treeSitter.dir}"
             let gdb_path="${pkgs.gdb}/bin/gdb"
-            let codeium_path="${pkgs.codeium}/bin/codeium_language_server"
             luafile ${loadConfig.dir}/${appName}/init.lua
           '';
         };

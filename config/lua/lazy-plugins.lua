@@ -113,42 +113,6 @@ require('lazy').setup({
     end,
   },
 
-  {
-    'github/copilot.vim',
-    dir = vim.g.lazy_root .. '/copilot.vim',
-    config = function()
-      vim.g.copilot_enabled = false
-      vim.g.copilot_filetypes = {
-        markdown = true,
-        yaml = true,
-      }
-      vim.g.copilot_no_tab_map = true
-      vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
-        expr = true,
-        noremap = false,
-        silent = true,
-        desc = 'Copilot: Accept Suggestion'
-      })
-    end,
-  },
-
-  {
-    'Exafunction/codeium.vim',
-    dir = vim.g.lazy_root .. '/codeium.vim',
-    event = 'BufEnter',
-    config = function()
-      vim.g.codeium_bin = vim.g.codeium_path
-      vim.g.codeium_no_tab_map = 1
-      vim.g.codeium_disable_bindings = 1
-      vim.keymap.set('i', '<C-J>', 'codeium#Accept()', {
-        expr = true,
-        noremap = false,
-        silent = true,
-        desc = 'Codeium: Accept Suggestion'
-      })
-    end,
-  },
-
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   {
@@ -357,15 +321,6 @@ require('lazy').setup({
       end,
   },
 
-  {
-    'NickvanDyke/opencode.nvim',
-    dir = vim.g.lazy_root .. '/opencode.nvim',
-    config = function()
-      vim.opt.autoread = true
-
-      vim.keymap.set("x", "<leader>o", function() require("opencode").ask("@this: ", { submit = true }) end, { desc = "Ask opencode" })
-    end,
-  },
 }, {})
 
 -- The line beneath this is called `modeline`. See `:help modeline`

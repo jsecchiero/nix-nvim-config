@@ -80,38 +80,6 @@
         "type": "github"
       }
     },
-    "codeium.vim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1736806419,
-        "narHash": "sha256-LSc0lElEbms1mdDNJginzfFvD7YfIUyKoSTih53WOS4=",
-        "owner": "Exafunction",
-        "repo": "codeium.vim",
-        "rev": "000de972de76f357c03da14f4f8dd9a969d4fe8c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Exafunction",
-        "repo": "codeium.vim",
-        "type": "github"
-      }
-    },
-    "copilot.vim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1742848425,
-        "narHash": "sha256-1l8BU7gwBVHy6DrXijq82fzR7aVWe7zEIsOOUPxRpyQ=",
-        "owner": "github",
-        "repo": "copilot.vim",
-        "rev": "a9228e015528c9307890c48083c925eb98a64a79",
-        "type": "github"
-      },
-      "original": {
-        "owner": "github",
-        "repo": "copilot.vim",
-        "type": "github"
-      }
-    },
     "fidget.nvim": {
       "flake": false,
       "locked": {
@@ -568,23 +536,6 @@
         "type": "github"
       }
     },
-    "opencode.nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1768156520,
-        "narHash": "sha256-f/jQPgyr1fL1NY2WsMj5BCqFiGgV8mjHFBNORdlvtPE=",
-        "owner": "NickvanDyke",
-        "repo": "opencode.nvim",
-        "rev": "cb8660e08fb6ecc248f267ff0f45d5be5075c586",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NickvanDyke",
-        "repo": "opencode.nvim",
-        "rev": "cb8660e08fb6ecc248f267ff0f45d5be5075c586",
-        "type": "github"
-      }
-    },
     "plenary.nvim": {
       "flake": false,
       "locked": {
@@ -608,8 +559,6 @@
         "better-vim-tmux-resizer": "better-vim-tmux-resizer",
         "cmp-nvim-lsp": "cmp-nvim-lsp",
         "cmp_luasnip": "cmp_luasnip",
-        "codeium.vim": "codeium.vim",
-        "copilot.vim": "copilot.vim",
         "fidget.nvim": "fidget.nvim",
         "friendly-snippets": "friendly-snippets",
         "gitsigns.nvim": "gitsigns.nvim",
@@ -627,7 +576,6 @@
         "nvim-dap": "nvim-dap",
         "nvim-lspconfig": "nvim-lspconfig",
         "nvim-treesitter-textobjects": "nvim-treesitter-textobjects",
-        "opencode.nvim": "opencode.nvim",
         "plenary.nvim": "plenary.nvim",
         "telescope-fzf-native.nvim": "telescope-fzf-native.nvim",
         "telescope.nvim": "telescope.nvim",
