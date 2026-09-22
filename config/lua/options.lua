@@ -44,6 +44,10 @@ vim.bo.shiftwidth = 4
 -- Set tabstop for golang
 vim.cmd [[ autocmd FileType go setlocal tabstop=4 shiftwidth=4 noexpandtab ]]
 
+-- [[ Quickfix/location list filtering ]]
+-- Adds :Cfilter and :Lfilter, see `:help cfilter`
+vim.cmd.packadd('cfilter')
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
